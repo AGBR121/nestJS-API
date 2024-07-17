@@ -71,3 +71,73 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+Install NodeJS:
+
+```
+sudo apt install -y curl
+```
+```
+sudo apt install -y nodejs
+```
+```
+curl o https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+```
+source ~/.bashrc
+```
+```
+nvm list-remote
+```
+```
+nvm install v16
+```
+
+Install Docker:
+
+```
+sudo apt install apt-transport-https curl gnupg-agent ca-certificates software-properties-common -y
+```
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+```
+```
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+```
+sudo apt update
+```
+```
+sudo apt install docker-ce
+```
+```
+sudo apt install docker-compose
+```
+
+Config github SSH:
+```
+cd ~/.ssh
+```
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+```
+sudo nano ~/.ssh/config
+```
+
+Add:
+ForwardAgent yes
+
+```
+eval `ssh-agent -s`
+```
+```
+ssh-add
+```
+```
+ssh-add ~/.ssh/github
+```
+```
+git clone git@github.com:FrankiNarvaez/nestjs-project26.git :)
+```
+
